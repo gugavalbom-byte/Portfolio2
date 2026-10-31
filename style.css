@@ -328,6 +328,10 @@ h3 {
         flex-direction: column;
     }
 
+    #custom-cursor {
+    display: none;
+    }
+
     .grupo {
         width: 100%;
     }
