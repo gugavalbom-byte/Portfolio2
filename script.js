@@ -121,6 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             project.images.forEach(imagePath => {
                 const imgElement = document.createElement("img");
+                imgElement.loading = "lazy";
+                imgElement.decoding = "async";
                 imgElement.src = imagePath;
                 imgElement.alt = project.title;
                 imgElement.style.width = "60%";
@@ -229,8 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-
-
 
 window.addEventListener("pageshow", (event) => {
     if (!event.persisted) return;
