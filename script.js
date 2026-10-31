@@ -229,3 +229,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+
+window.addEventListener("pageshow", (event) => {
+    if (!event.persisted) return;
+
+    document.body.classList.add("loaded");
+    document.getElementById("transition-overlay")?.classList.remove("active");
+});
