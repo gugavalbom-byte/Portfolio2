@@ -1,0 +1,428 @@
+    
+/* ==========================================
+   FONTS
+   ========================================== */
+@font-face {
+    src: url(fonts/ndot-47-inspired-by-nothing.otf);
+    font-family: Ndot47;
+}
+
+@font-face {
+    src: url(fonts/SourceCodePro-VariableFont_wght.ttf);
+    font-family: sourcecode;
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(Outfit-VariableFont_wght.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+}
+
+/* ==========================================
+   GLOBAL RESET & GLOBAL FORCED CURSOR REMOVAL
+   ========================================== */
+* {
+    margin-bottom: 1%;
+    font-family: Helvetica Neue, "helvetica", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    box-sizing: border-box; 
+    cursor: none !important; /* Strips browser pointer across every tag */
+}
+
+a {
+    font-family: sourcecode, "helvetica", sans-serif;
+}
+
+/* ==========================================
+   BASE & STRUCTURE ELEMENTS
+   ========================================== */
+body {
+    background-color: #f5f5f5;
+    max-width: 1500px;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 1s, transform 0.5s cubic-bezier(0.87, -0.01, 1, 1);
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    background-color: #f5f5f5;
+    padding: 1%;
+}
+
+.container div {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.mae {
+    display: flex;
+    margin: 0;
+}
+
+.grupo {
+    width: 25%;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 3%;
+}
+
+p {
+    font-size: 2.5em;
+}
+
+.works-page p {
+    font-size: 2.5vw;
+}
+
+.works-page .gallery-legend {
+    position: fixed;
+    bottom: calc(2% + 1.5em + 1.5rem);
+    right: 3%;
+    width: fit-content;
+    z-index: 2;
+    font-size: clamp(0.75rem, 1.1vw, 1rem);
+}
+
+.works-page .grupo {
+    width: 65%;
+}
+
+.works-page .mae.has-gallery {
+    position: relative;
+}
+
+.works-page .project-image-wrap {
+    display: contents;
+}
+
+.works-page .gallery-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2.5vw;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* ==========================================
+   IMAGES & MEDIA TARGETS
+   ========================================== */
+img {
+    max-width: 20%;
+}
+
+.detail-moving-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: clamp(180px, 24vw, 320px);
+    max-width: calc(100vw - 2rem);
+    z-index: 0;
+    transition: left 4s ease-in-out, top 4s ease-in-out, transform 0.6s ease;
+}
+
+.detail-moving-image:hover {
+    transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .detail-moving-image {
+        position: static;
+        transition: none;
+    }
+}
+
+#img-main {
+    max-width: 25%;
+}
+
+#img2 {
+    max-width: 75%;
+    margin: auto;
+    margin-top: 15%;
+}
+
+#gallery-content {
+    max-width: none;
+    flex-direction: column;
+}
+
+#gallery-content img {
+    max-width: 60%;
+}
+
+/* ==========================================
+   TYPOGRAPHY & ACTIONS
+   ========================================== */
+#texto1 {
+    position: absolute;
+    bottom: 0;
+}
+
+.detail-copy-bottom-right #texto1 {
+    position: fixed;
+    right: 3%;
+    bottom: 8%;
+    width: min(44rem, 55vw);
+    z-index: 1;
+}
+
+h2 {
+    font-family: Ndot47, "helvetica", sans-serif;
+    position: fixed;
+    font-size: 3em;
+    font-style: none;
+    background-color: #032068;
+    color: white;
+    width: fit-content;
+    top: 2%;
+    right: 3%;
+}
+
+h2:hover {
+    background-color: #f1f1f100;
+    color: #032068;
+}
+
+h3 {
+    color: white;
+    width: fit-content;
+    background-color: #F2BB06;
+    font-size: 1.6vw;
+}
+
+.link {
+    color: #B80529;
+    text-decoration: underline;
+}
+
+.transition-link {
+    font-size: 1.3em;
+    border: none;
+    background-color: #f5f5f500;
+    color: #F2BB06;
+}
+
+.transition-link:hover {
+    background-color: #F2BB06;
+    color: white;
+}
+
+#destaque {
+    background-color: white;
+    font-weight: 600;
+}
+
+#titulohide {
+    font-size: 3vw;
+    font-style: none;
+    background-color: #032068;
+    color: white;
+    width: fit-content;
+    margin-top: 13%;
+    margin-right: 10%;
+    display: none;
+}
+
+#fixedbutton {
+    font-family: Ndot47, source code, "helvetica", sans-serif;
+    font-size: 1.5em;
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+    background-color: #032068; 
+    color: white;
+}
+
+#fixedbutton:hover {
+    background-color: white;
+    color: #032068;
+}
+
+/* ==========================================
+   PAGE TRANSITION OVERLAY
+   ========================================== */
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background: #f2bb0600;
+    opacity: 0;
+    z-index: 9997; 
+    pointer-events: none;
+    transition: left 0.6s ease, opacity 0.1s ease;
+}
+
+#transition-overlay.active {
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ==========================================
+   CUSTOM MOUSE CURSOR SETUP
+   ========================================== */
+#custom-cursor {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F2BB06; 
+    border: 2px solid #F2BB06;     
+    pointer-events: none; 
+    z-index: 99999; /* Keeps it on top of your layout */
+    will-change: transform;
+}
+
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+@media (max-width: 1800px) {
+    .container {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .mae {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grupo {
+        width: 100%;
+    }
+
+    .works-page .grupo {
+        width: 100%;
+    }
+
+    .works-page .gallery-indicator {
+        left: auto;
+        right: 0;
+        font-size: 8vw;
+    }
+
+    .works-page .gallery-legend {
+        right: 5%;
+        bottom: calc(2% + 4vw + 1.5rem);
+    }
+
+    .works-page .mae.has-gallery #texto1 {
+        padding-right: 8vw;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .detail-moving-image {
+        width: 60vw;
+        max-width: 80vw;
+    }
+
+    .detail-moving-image:hover {
+        transform: none;
+    }
+
+    .detail-copy-bottom-right #texto1 {
+        position: fixed;
+        left: 50%;
+        right: auto;
+        bottom: 10%;
+        width: min(90vw, 35rem);
+        margin: 0;
+        text-align: left;
+        transform: translateX(-50%);
+    }
+
+    #img-main {
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 9vw;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    h3 {
+        font-size: 4vw;
+        margin-top: 5%;
+    }
+
+    #texto1 {
+        position: relative;
+        width: 100%;
+        margin-bottom: 5%;
+        margin-top: 2%;
+    }
+
+    #textoIG {
+        display: none;
+    }
+
+    #titulohide {
+        font-size: 5vw;
+        margin-top: 3%;
+        margin-right: 2%;
+        position: absolute;
+        display: block;
+    }
+
+    #fixedbutton {
+        font-size: 4vw;
+        bottom: 2%;
+        right: 5%;
+    }
+
+    .container {
+        grid-template-columns: auto;
+    }
+
+    #img2 {
+        max-width: 100%;
+        margin-top: 5%;
+    }
+}
