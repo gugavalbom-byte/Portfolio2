@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         "chaos": {
             title: "CNTRL+CHAOS Magazine, 2025",
-            images: ["./imgsGallery/chaos_1.jpeg"], ["./imgsGallery/chaos_2.jpeg"], ["./imgsGallery/chaos_3.jpeg"], ["./imgsGallery/chaos_4.jpeg"]
+            images: ["./imgsGallery/chaos_1.jpeg", "./imgsGallery/chaos_2.jpeg", "./imgsGallery/chaos_3.jpeg", "./imgsGallery/chaos_4.jpeg"]
         },
         "workart": {
             title: "Motion Graphic, 2025",
