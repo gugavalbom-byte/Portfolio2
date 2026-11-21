@@ -170,4 +170,8 @@ article {
         justify-items: left;
         margin-top: 5%;
     }
+
+    #custom-cursor {
+        display: none;
+    }
 }
