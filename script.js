@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         "chaos": {
             title: "CNTRL+CHAOS Magazine, 2025",
+            text:"BLABLAHBLAH",
             images: ["./imgsGallery/chaos_1.jpeg", "./imgsGallery/chaos_2.jpeg", "./imgsGallery/chaos_3.jpeg", "./imgsGallery/chaos_4.jpeg"]
         },
         "workart": {
@@ -118,6 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (imageContainer) {
         if (activeProjectKey && galleryData[activeProjectKey]) {
             const project = galleryData[activeProjectKey];
+
+            if (typeof project.text === "string" && project.text.trim()) {
+                const description = document.createElement("p");
+                description.className = "gallery-description";
+                description.textContent = project.text;
+                imageContainer.appendChild(description);
+            }
 
             project.images.forEach(imagePath => {
                 const imgElement = document.createElement("img");
