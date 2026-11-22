@@ -76,24 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         
     };
-   
-    projectData.images.forEach(src => {
-      const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
-    
-      if (isVideo) {
-        const video = document.createElement("video");
-        video.src = src;
-        video.controls = true; // or autoplay, muted, loop, playsinline
-        video.muted = true;
-        video.loop = true;
-        video.playsInline = true;
-        video.autoplay = true;
-        container.appendChild(video);
-      } else {
-        const img = document.createElement("img");
-        img.src = src;
-        container.appendChild(img);
-      }
+
     });
 
     projects.forEach(project => {
