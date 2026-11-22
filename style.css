@@ -165,7 +165,10 @@ img {
 }
 
 #gallery-content img {
-    max-width: 50%;
+    max-width: 40%;
+}
+#gallery-content video {
+    max-width: 40%;
 }
 
 /* ==========================================
