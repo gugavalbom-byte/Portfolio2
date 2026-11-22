@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll(".transition-link");
 
     const galleryData = {
+        "PosterMostra": {
+            title: "Poster Mostra",
+            text:"Official selection of Poster Mostra 2026, Marvila, Lisbon",
+            images: ["./imgsGallery/postermostra1.jpg", "./imgsGallery/postermostra2.jpg", "./imgsGallery/postermostra3.jpg"]
+        },
+        "FrenteZ": {
+            title: "Indie Frente",
+            images: ["./imgsGallery/frentez_1.jpg", "./imgsGallery/frentez_2.png", "./imgsGallery/frentez_3.png"]
+        },
         "pensarMenos": {
             title: "pensarMenos Type",
             text: "Typography made for the 'Pensar Menos' postcards, music and photos by Oscar Correia.",
