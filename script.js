@@ -1,8 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-   
     const overlay = document.getElementById("transition-overlay");
     const links = document.querySelectorAll(".transition-link");
+
+    const galleryData = {
+        "pensarMenos": {
+            title: "pensarMenos Type",
+            text: "Typography made for the 'Pensar Menos' postcards, music and photos by Oscar Correia.",
+            images: ["./imgsGallery/pensarmenos1.jpg", "./imgsGallery/pensarmenos2.jpg", "./imgsGallery/pensarmenos3.jpg"]
+        },
+        "eclipture": {
+            title: "eclipture posters",
+            images: ["./imgsGallery/eclipture1.jpg", "./imgsGallery/eclipture2.jpg", "./imgsGallery/eclipture3.jpg", "./imgsGallery/eclipture4.jpg", "./imgsGallery/eclipture5.jpg"]
+        },
+        "aovivo_aviao": {
+            title: "aovivo_aviao",
+            text: "Animation and posters for a couple of shows at Avião, Bairro Alto.",
+            images: ["./imgsGallery/aviao_live_martim_2.jpg", "./imgsGallery/aviao_live_oscar.jpg", "./imgsGallery/aviao_live_rebenta.jpg", "./imgsGallery/aovivo_2.mp4"]
+        },
+        "chaos": {
+            title: "CNTRL+CHAOS Magazine, 2025",
+            text: "CTRL + CHAOS. Is Anarchy a utopia or merely a tool for spiritual or political liberation? Either way, it is certainly a stance toward art and Design. We believe that today, more than ever, it is important to be at least minimally Anarchic, especially if we work in the arts. Questioning social, political, and artistic norms is what distinguishes interesting Design from uninteresting Design. Anarchic aesthetics are those that refuse to follow trends, algorithms, or predictable briefs. It is Design born from the urgency of expression, rather than the need to please. It is understanding that every creative gesture is an affirmation of freedom—and, therefore, of responsibility. Anarchy, in this sense, is not chaos, but the refusal of blind obedience. Design, when aware of its power, can be a tool for emancipation. A piece of Design can and should be a political act. Choosing what to communicate, how to communicate, and to whom to communicate defines which side of history the Designer chooses to stand on. In this publication, we aim to showcase two groups (The Black Mask and Up Against The Wall Motherfuckers and Adbusters), from different decades, who were influential in the thinking and making of Anarchic Design. In order to reinforce the Anarchic ideas of these groups, we have included other case studies as secondary articles that fall within the scope of Anarchic Design.",
+            images: ["./imgsGallery/chaos_1.jpeg", "./imgsGallery/chaos_2.jpeg", "./imgsGallery/chaos_3.jpeg", "./imgsGallery/chaos_4.jpeg", "./imgsGallery/publicacao_anarca_DC.jpg", "./imgsGallery/publicacao_anarca_DC2.jpg", "./imgsGallery/publicacao_anarca_DC3.jpg", "./imgsGallery/publicacao_anarca_DC4.jpg", "./imgsGallery/publicacao_anarca_DC5.jpg", "./imgsGallery/publicacao_anarca_DC6.jpg", "./imgsGallery/publicacao_anarca_DC7.jpg", "./imgsGallery/publicacao_anarca_DC8.jpg", "./imgsGallery/publicacao_anarca_DC9.jpg", "./imgsGallery/publicacao_anarca_DC10.jpg", "./imgsGallery/publicacao_anarca_DC11.jpg", "./imgsGallery/publicacao_anarca_DC12.jpg"]
+        },
+        "workart": {
+            title: "Motion Graphic, 2025",
+            images: ["../imgs/workArt.gif"]
+        }
+    };
 
     // Slide+fade in when page loads
     requestAnimationFrame(() => {
@@ -31,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
     const projects = document.querySelectorAll(".mae[data-project]");
 
     projects.forEach(project => {
@@ -46,37 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 handlePageExit(targetUrl);
             }
         });
-    });
-
-
-    const galleryData = {
-
-        "pensarMenos": {
-            title: "pensarMenos Type",
-            text:"Typography made for the 'Pensar Menos' postcards, music and photos by Oscar Correia.",
-            images: ["./imgsGallery/pensarmenos1.jpg", "./imgsGallery/pensarmenos2.jpg", "./imgsGallery/pensarmenos3.jpg"]
-        },
-        "eclipture": {
-            title: "eclipture posters",
-            images: ["./imgsGallery/eclipture1.jpg", "./imgsGallery/eclipture2.jpg", "./imgsGallery/eclipture3.jpg", "./imgsGallery/eclipture4.jpg", "./imgsGallery/eclipture5.jpg"]
-        },
-        "aovivo_aviao": {
-            title: "aovivo_aviao",
-            text: "Animation and posters for a couple of shows at Avião, Bairro Alto.",
-            images: ["./imgsGallery/aviao_live_martim_2.jpg", "./imgsGallery/aviao_live_oscar.jpg", "./imgsGallery/aviao_live_rebenta.jpg", "./imgsGallery/aovivo_2.mp4"]
-        },
-        "chaos": {
-            title: "CNTRL+CHAOS Magazine, 2025",
-            text:"CTRL + CHAOS. Is Anarchy a utopia or merely a tool for spiritual or political liberation? Either way, it is certainly a stance toward art and Design. We believe that today, more than ever, it is important to be at least minimally Anarchic, especially if we work in the arts. Questioning social, political, and artistic norms is what distinguishes interesting Design from uninteresting Design. Anarchic aesthetics are those that refuse to follow trends, algorithms, or predictable briefs. It is Design born from the urgency of expression, rather than the need to please. It is understanding that every creative gesture is an affirmation of freedom—and, therefore, of responsibility. Anarchy, in this sense, is not chaos, but the refusal of blind obedience. Design, when aware of its power, can be a tool for emancipation. A piece of Design can and should be a political act. Choosing what to communicate, how to communicate, and to whom to communicate defines which side of history the Designer chooses to stand on. In this publication, we aim to showcase two groups (The Black Mask and Up Against The Wall Motherfuckers and Adbusters), from different decades, who were influential in the thinking and making of Anarchic Design. In order to reinforce the Anarchic ideas of these groups, we have included other case studies as secondary articles that fall within the scope of Anarchic Design.",
-            images: ["./imgsGallery/chaos_1.jpeg", "./imgsGallery/chaos_2.jpeg", "./imgsGallery/chaos_3.jpeg", "./imgsGallery/chaos_4.jpeg", "./imgsGallery/publicacao_anarca_DC.jpg", "./imgsGallery/publicacao_anarca_DC2.jpg", "./imgsGallery/publicacao_anarca_DC3.jpg", "./imgsGallery/publicacao_anarca_DC4.jpg", "./imgsGallery/publicacao_anarca_DC5.jpg", "./imgsGallery/publicacao_anarca_DC6.jpg", "./imgsGallery/publicacao_anarca_DC7.jpg", "./imgsGallery/publicacao_anarca_DC8.jpg", "./imgsGallery/publicacao_anarca_DC9.jpg", "./imgsGallery/publicacao_anarca_DC10.jpg", "./imgsGallery/publicacao_anarca_DC11.jpg", "./imgsGallery/publicacao_anarca_DC12.jpg" ]
-        },
-        "workart": {
-            title: "Motion Graphic, 2025",
-            images: ["../imgs/workArt.gif"]
-        },
-        
-    };
-
     });
 
     projects.forEach(project => {
@@ -135,20 +127,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 imageContainer.appendChild(description);
             }
 
-            project.images.forEach(imagePath => {
-                const imgElement = document.createElement("img");
-                imgElement.loading = "lazy";
-                imgElement.decoding = "async";
-                imgElement.src = imagePath;
-                imgElement.alt = project.title;
-                imgElement.style.width = "60%";
-                imgElement.style.display = "block";
-                imgElement.style.marginBottom = "25px";
-                imageContainer.appendChild(imgElement);
+            project.images.forEach(mediaPath => {
+                const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(mediaPath);
+
+                if (isVideo) {
+                    const videoElement = document.createElement("video");
+                    videoElement.src = mediaPath;
+                    videoElement.controls = true;
+                    videoElement.autoplay = true;
+                    videoElement.loop = true;
+                    videoElement.muted = true;
+                    videoElement.playsInline = true;
+                    videoElement.style.width = "60%";
+                    videoElement.style.display = "block";
+                    videoElement.style.marginBottom = "25px";
+                    imageContainer.appendChild(videoElement);
+                } else {
+                    const imgElement = document.createElement("img");
+                    imgElement.loading = "lazy";
+                    imgElement.decoding = "async";
+                    imgElement.src = mediaPath;
+                    imgElement.alt = project.title;
+                    imgElement.style.width = "60%";
+                    imgElement.style.display = "block";
+                    imgElement.style.marginBottom = "25px";
+                    imageContainer.appendChild(imgElement);
+                }
             });
         }
     }
-
 
     const movingImage = document.querySelector(".detail-moving-image");
 
@@ -208,8 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("resize", () => moveImage(true));
     }
 
-
-    
     const cursor = document.getElementById("custom-cursor");
 
     if (cursor) {
@@ -224,17 +229,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function createTrailDot(x, y) {
         const dot = document.createElement("div");
         dot.className = "trail-dot";
-        
+
         // Centers each trail dot exactly where your mouse was located
         dot.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
-        
+
         document.body.appendChild(dot);
 
         setTimeout(() => {
             dot.remove();
         }, 600);
     }
-
 });
 
 window.addEventListener("pageshow", (event) => {
