@@ -50,7 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const galleryData = {
-        
+
+        "capitalism": {
+            title: "capitalism, 2026",
+            images: ["./imgsGallery/capitalism_1.jpeg", "./imgsGallery/capitalism_2.jpeg", "./imgsGallery/capitalism_3.jpeg", "./imgsGallery/capitalism_4.jpeg", "./imgsGallery/capitalism_5.jpeg", "./imgsGallery/capitalism_6.jpeg", "./imgsGallery/capitalism_7.jpeg", "./imgsGallery/capitalism_8.jpeg", "./imgsGallery/capitalism_9.jpeg", "./imgsGallery/capitalism_10.jpeg"]
+        },
         "chaos": {
             title: "CNTRL+CHAOS Magazine, 2025",
             text:"CTRL + CHAOS. Is Anarchy a utopia or merely a tool for spiritual or political liberation? Either way, it is certainly a stance toward art and Design. We believe that today, more than ever, it is important to be at least minimally Anarchic, especially if we work in the arts. Questioning social, political, and artistic norms is what distinguishes interesting Design from uninteresting Design. Anarchic aesthetics are those that refuse to follow trends, algorithms, or predictable briefs. It is Design born from the urgency of expression, rather than the need to please. It is understanding that every creative gesture is an affirmation of freedom—and, therefore, of responsibility. Anarchy, in this sense, is not chaos, but the refusal of blind obedience. Design, when aware of its power, can be a tool for emancipation. A piece of Design can and should be a political act. Choosing what to communicate, how to communicate, and to whom to communicate defines which side of history the Designer chooses to stand on. In this publication, we aim to showcase two groups (The Black Mask and Up Against The Wall Motherfuckers and Adbusters), from different decades, who were influential in the thinking and making of Anarchic Design. In order to reinforce the Anarchic ideas of these groups, we have included other case studies as secondary articles that fall within the scope of Anarchic Design.",
