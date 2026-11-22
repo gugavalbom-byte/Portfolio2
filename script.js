@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "pensarMenos": {
             title: "pensarMenos Type",
             text:"Typography made for the 'Pensar Menos' postcards, music and photos by Oscar Correia.",
-            images: ["./imgsGallery/eclipture1.jpg", "./imgsGallery/eclipture2.jpg", "./imgsGallery/eclipture3.jpg", "./imgsGallery/eclipture4.jpg", "./imgsGallery/eclipture5.jpg"]
+            images: ["./imgsGallery/pensarmenos1.jpg", "./imgsGallery/pensarmenos2.jpg", "./imgsGallery/pensarmenos3.jpg"]
         },
         "eclipture": {
             title: "eclipture posters",
