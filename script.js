@@ -51,6 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const galleryData = {
 
+        "pensarMenos": {
+            title: "pensarMenos Type",
+            text:"Typography made for the 'Pensar Menos' postcards, music and photos by Oscar Correia.",
+            images: ["./imgsGallery/eclipture1.jpg", "./imgsGallery/eclipture2.jpg", "./imgsGallery/eclipture3.jpg", "./imgsGallery/eclipture4.jpg", "./imgsGallery/eclipture5.jpg"]
+        },
+        "eclipture": {
+            title: "eclipture posters",
+            images: ["./imgsGallery/eclipture1.jpg", "./imgsGallery/eclipture2.jpg", "./imgsGallery/eclipture3.jpg", "./imgsGallery/eclipture4.jpg", "./imgsGallery/eclipture5.jpg"]
+        },
         "aovivo_aviao": {
             title: "aovivo_aviao",
             text: "Animation and posters for a couple of shows at Avião, Bairro Alto.",
@@ -67,6 +76,25 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         
     };
+   
+    projectData.images.forEach(src => {
+      const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
+    
+      if (isVideo) {
+        const video = document.createElement("video");
+        video.src = src;
+        video.controls = true; // or autoplay, muted, loop, playsinline
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.autoplay = true;
+        container.appendChild(video);
+      } else {
+        const img = document.createElement("img");
+        img.src = src;
+        container.appendChild(img);
+      }
+    });
 
     projects.forEach(project => {
         const projectData = galleryData[project.getAttribute("data-project")];
