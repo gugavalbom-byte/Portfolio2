@@ -51,9 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const galleryData = {
 
-        "capitalism": {
-            title: "capitalism, 2026",
-            images: ["./imgsGallery/capitalism_1.jpeg", "./imgsGallery/capitalism_2.jpeg", "./imgsGallery/capitalism_3.jpeg", "./imgsGallery/capitalism_4.jpeg", "./imgsGallery/capitalism_5.jpeg", "./imgsGallery/capitalism_6.jpeg", "./imgsGallery/capitalism_7.jpeg", "./imgsGallery/capitalism_8.jpeg", "./imgsGallery/capitalism_9.jpeg", "./imgsGallery/capitalism_10.jpeg"]
+        "aovivo_aviao": {
+            title: "aovivo_aviao",
+            text: "Animation and posters for a couple of shows at Avião, Bairro Alto.",
+            images: ["./imgsGallery/aviao_live_martim_2.jpg", "./imgsGallery/aviao_live_oscar.jpg", "./imgsGallery/aviao_live_rebenta.jpg", "./imgsGallery/aovivo_2.mp4"]
         },
         "chaos": {
             title: "CNTRL+CHAOS Magazine, 2025",
