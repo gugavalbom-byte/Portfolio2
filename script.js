@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // ==========================================
-    // 1. PAGE TRANSITIONS (SLIDE + FADE IN/OUT)
-    // ==========================================
+   
     const overlay = document.getElementById("transition-overlay");
     const links = document.querySelectorAll(".transition-link");
 
@@ -34,9 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // ==========================================
-    // 2. PORTFOLIO GRID CLICKS (MAIN PAGE)
-    // ==========================================
     const projects = document.querySelectorAll(".mae[data-project]");
 
     projects.forEach(project => {
@@ -54,14 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // ==========================================
-    // 3. DYNAMIC GALLERY LOADER (GALLERY PAGE)
-    // ==========================================
     const galleryData = {
         
         "chaos": {
             title: "CNTRL+CHAOS Magazine, 2025",
-            text:"BLABLAHBLAH",
+            text:"CTRL + CHAOS<br>Is Anarchy a utopia or merely a tool for spiritual or political liberation? Either way, it is certainly a stance toward art and Design.<br>We believe that today, more than ever, it is important to be at least minimally Anarchic, especially if we work in the arts. Questioning social, political, and artistic norms is what distinguishes interesting Design from uninteresting Design. <br>Anarchic aesthetics are those that refuse to follow trends, algorithms, or predictable briefs. It is Design born from the urgency of expression, rather than the need to please. It is understanding that every creative gesture is an affirmation of freedom—and, therefore, of responsibility. Anarchy, in this sense, is not chaos, but the refusal of blind obedience. Design, when aware of its power, can be a tool for emancipation. A piece of Design can and should be a political act. Choosing what to communicate, how to communicate, and to whom to communicate defines which side of history the Designer chooses to stand on. <br>In this publication, we aim to showcase two groups (The Black Mask and Up Against The Wall Motherfuckers and Adbusters), from different decades, who were influential in the thinking and making of Anarchic Design. <br>In order to reinforce the Anarchic ideas of these groups, we have included other case studies as secondary articles that fall within the scope of Anarchic Design.",
             images: ["./imgsGallery/chaos_1.jpeg", "./imgsGallery/chaos_2.jpeg", "./imgsGallery/chaos_3.jpeg", "./imgsGallery/chaos_4.jpeg"]
         },
         "workart": {
@@ -142,9 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // ==========================================
-    // 4. RANDOM DETAIL-PAGE IMAGE MOVEMENT
-    // ==========================================
     const movingImage = document.querySelector(".detail-moving-image");
 
     if (movingImage && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -204,15 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // ==========================================
-    // 5. CUSTOM CIRCLE MOUSE TRAIL
-    // ==========================================
-    // ==========================================
-    // 4. CUSTOM CIRCLE MOUSE TRAIL (PERFECT ALIGNMENT)
-    // ==========================================
-    // ==========================================
-    // 4. CUSTOM CIRCLE MOUSE TRAIL (PERFECT CENTERED ALIGNMENT)
-    // ==========================================
+    
     const cursor = document.getElementById("custom-cursor");
 
     if (cursor) {
